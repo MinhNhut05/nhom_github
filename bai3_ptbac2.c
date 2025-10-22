@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-int ptb2(){
+void ptb2(){
     double a, b, c;
     printf("nhap he so a: ");
     scanf("%lf", &a);
