@@ -27,8 +27,3 @@ void nhap_diem() {
 
     return;
 }
-
-int main() {
-    nhap_diem();
-    return 0;
-}
