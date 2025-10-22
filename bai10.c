@@ -1,4 +1,4 @@
-#10
+#include<stdio.h>
 void Fi(){
 	int n;
 	printf("nhap vao n:");
@@ -22,16 +22,3 @@ void Fi(){
 
 
 
-int main()
-	{
-		thang();
-		Nam();
-		giaiPt();
-//		Tiendien();
-		CuuChuong();
-		tinhGiaithua();
-		In();
-		Nhap();
-		Fi();
-		return 0;
-	}

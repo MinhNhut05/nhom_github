@@ -1,29 +1,24 @@
 #include <stdio.h>
 
-void nhap_diem() {
-    float van, toan, anh, dtb;
+void tinh_tien_dien(){
+    int so_dien;
+    printf("nhap so dien (kWh): ");
+    if (scanf("%d", &so_dien) != 1 || so_dien < 0) {
+        printf("du lieu khong hop le\n");
+        return;
+    }
 
-    printf("Nhap diem van: ");
-    scanf("%f", &van);
+    long long tong_tien = 0;
 
-    printf("Nhap diem toan: ");
-    scanf("%f", &toan);
+    if (so_dien <= 100) {
+        tong_tien = (long long)so_dien * 500;
+    } else if (so_dien <= 350) {
+        tong_tien = 100LL * 500 + (long long)(so_dien - 100) * 550;
+    } else if (so_dien <= 650) {
+        tong_tien = 100LL * 500 + 250LL * 550 + (long long)(so_dien - 350) * 650;
+    } else {
+        tong_tien = 100LL * 500 + 250LL * 550 + 300LL * 650 + (long long)(so_dien - 650) * 650;
+    }
 
-    printf("Nhap diem anh: ");
-    scanf("%f", &anh);
-
-    dtb = (van * 2 + toan * 2 + anh) / 5;
-
-    printf("Diem trung binh: %.2f\n", dtb);
-
-    if (dtb < 3)
-        printf("Hoc luc: Yeu\n");
-    else if (dtb < 5)
-        printf("Hoc luc: Trung binh\n");
-    else if (dtb < 7.9)
-        printf("Hoc luc: Kha\n");
-    else
-        printf("Hoc luc: Gioi\n");
-
-    return;
+    printf("tong so tien: %lld\n", tong_tien);
 }
