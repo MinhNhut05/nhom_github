@@ -4,6 +4,7 @@ void menu(){
     printf("*** MENU ***\n");
     printf("1- Xem ngay cua thang\n");
     printf("2- Kiem tra nam nhuan\n");
+    printf("4- Nhap diem\n");
     printf("------------------\n");
     printf("chon STT chuc nang: \n");
     printf("------------------\n");
@@ -20,7 +21,9 @@ void menu(){
         namnhuan();
         menu();
         break;
-    
+    case 4:
+        Nhapdiem();
+
     default:
         menu();
         break;
