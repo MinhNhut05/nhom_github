@@ -30,8 +30,3 @@ void nhapso()
 	tinhgiaithua(n);
 	
 }
-int main()
-{
-	nhapso();
-	return 0;
-}
